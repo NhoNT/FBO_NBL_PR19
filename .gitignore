@@ -1,0 +1,19 @@
+# Java artifact
+*.jar
+*.war
+*.ear
+*.class
+
+# Eclipse IDE
+.classpath
+.project
+.settings
+target
+
+# Netbeans IDE
+build.xml
+manifest.mf
+build
+nbproject
+nb-configuration.xml
+
