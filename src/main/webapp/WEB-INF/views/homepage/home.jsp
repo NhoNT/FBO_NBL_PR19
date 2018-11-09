@@ -5,16 +5,30 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Flight Booking Online</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--        <link href="../newcss.css" rel="stylesheet">-->
-        <style><%@include file="./newcss.css"%></style>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flight Booking Online</title>
+    <base href="${pageContext.request.getContextPath()}/resources/app/">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.getContextPath()}/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href="${pageContext.request.getContextPath()}/resources/app/css/newcss.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      /* Remove the navbar's default margin-bottom and rounded borders */ 
+      .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+      }
 
+      /* Add a gray background color and some padding to the footer */
+      footer {
+        background-color: #f2f2f2;
+        padding: 25px;
+      }
+
+    </style>
     </head>
     <body style="width: 80%; margin: auto">
 
@@ -141,13 +155,13 @@
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
                         
-                         <img  src="http://localhost:8084/fbo/img/8.jpg" alt=""/>  
+                         <img  src="img/8.jpg" alt=""/>  
                               
                                 <div class="carousel-caption">The is a new first slide</div>
                             </div>
                             <div class="item">
                                 
-                                <img  src="http://localhost:8084/fbo/img/8.jpg" alt=""/>  
+                                <img  src="img/8.jpg" alt=""/>  
                                 <div class="carousel-caption">The is the second slide</div>
                             </div>
 
