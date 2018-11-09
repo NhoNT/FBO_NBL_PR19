@@ -47,7 +47,24 @@
 
             <div class="row">
                 <div class="tab-content  col-xs-12 col-sm-6" style="background-color: #99ccff; padding: 10px; padding-bottom: 33px " >
-                    <h3>Search Ticket</h3>
+                    <img src="img/iconmaybay.png" style="width: 30px ; height: 40px" alt=""/> <h3>SEARCH FLIGHTS</h3>
+                    
+                    
+                    <div class="header">
+                                     <p class="input_left">
+                                        <input name="direction" id="loaive_o" value="0" onclick="disabledate(0)" type="radio" class="loaive" checked="checked">
+                                        <input name="trip_select_hidden" id="trip_select_hidden" type="hidden" value="1">
+                                        
+                                        <label for="loaive_o"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="">One-way</font></font></label>
+                             
+                                        <input name="direction" id="loaive_r" onclick="disabledate(1);" value="1" type="radio" class="loaive">
+                                    
+                                        <label for="loaive_r"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Round-trip</font></font></label>
+                                     </p> 
+                             </div>
+                    
+                    
+                     
                     <div role="tabpanel" class="tab-pane active" id="flights">
                         <div class="row">
                             <div class="col-xxs-12 col-xs-6 mt">
@@ -72,13 +89,13 @@
                             </div>
                             <div class="col-xxs-12 col-xs-6 mt alternate">
                                 <div class="input-field">
-                                    <label for="date-start">Days To Go:</label>
+                                    <label for="date-start">Departure:</label>
                                     <input type="date" class="form-control" id="date-start" placeholder="mm/dd/yyyy">
                                 </div>
                             </div>
                             <div class="col-xxs-12 col-xs-6 mt alternate">
                                 <div class="input-field">
-                                    <label for="date-end">Day On:</label>
+                                    <label for="date-end">Arrive:</label>
                                     <input type="date" class="form-control" id="date-end" placeholder="mm/dd/yyyy">
                                 </div>
                             </div>
@@ -151,7 +168,7 @@
                             <div class="gutter js-agoda-datalayer js-boxever" data-city-list="Sydney,Penang,Phuket,Hồng Kông,Tp. Hồ Chí Minh" data-api-url="https://deals.agoda.com/api/JSON/" data-siteid="1604047" data-apikey="2955788c-fea1-4997-ac7b-83c587bdc1f1" data-length-of-stay="3" data-currency="VND" data-culture="vi-vn" data-language="vi-VN" data-min-daily-rate="50" data-max-daily-rate="500" data-min-rating="3" data-max-rating="5" data-min-discount="15" data-min-review="5" data-decimal="0" data-region="searchesHotelOffers">
 
                                 <h2 class="section-title clearfix" style="margin-bottom: 8px;">
-                                    Flights
+                                    Hot Deals On Flights
                                     <a href="http://www.agoda.vn" target="_blank" class="icon-hover icon-text icon-text--rev icon-text--s1 section-title__link">View all flights
 
                                     </a>
