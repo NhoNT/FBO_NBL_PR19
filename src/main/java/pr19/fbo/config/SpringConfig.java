@@ -6,13 +6,15 @@ import javax.sql.DataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-//@Configuration
-//@EnableTransactionManagement
+@Configuration
+@EnableTransactionManagement
+@EnableJpaRepositories(basePackages = "pr19.fbo.domain.repository")
 public class SpringConfig {
 
   @Bean
@@ -30,7 +32,7 @@ public class SpringConfig {
     LocalContainerEntityManagerFactoryBean entityManager = new LocalContainerEntityManagerFactoryBean();
     entityManager.setDataSource(dataSource);
     entityManager.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-    entityManager.setPackagesToScan("pr19.fbo");
+    entityManager.setPackagesToScan("pr19.fbo.domain.entity");
     Properties properties = new Properties();
     properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
     properties.setProperty("hibernate.hbm2ddl.auto", "update");

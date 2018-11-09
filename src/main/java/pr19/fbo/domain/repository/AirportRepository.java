@@ -1,5 +1,10 @@
 package pr19.fbo.domain.repository;
 
-public interface AirportRepository {
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+import pr19.fbo.domain.entity.AirportEntity;
+
+@Repository
+public interface AirportRepository extends CrudRepository<AirportEntity, String> {
 
 }
