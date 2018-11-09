@@ -13,11 +13,12 @@ public class BookingServiceImpl implements BookingService {
   AirportRepository airportRepository;
 
   @Override
-  public void displaySearchFlight() {
+  public List<AirportEntity> getAllAirports() {
     List<AirportEntity> airportEntitys = (List<AirportEntity>) airportRepository.findAll();
     for (AirportEntity airportEntity : airportEntitys) {
       System.out.println(airportEntity.getLocation());
     }
+    return airportEntitys;
   }
 
 }

@@ -2,6 +2,7 @@ package pr19.fbo.app.booking;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pr19.fbo.domain.service.booking.BookingService;
 
@@ -13,8 +14,8 @@ public class BookingController {
   private BookingService bookingService;
 
   @RequestMapping(value = "displaySearch")
-  public String displaySearchBooking() {
-    bookingService.displaySearchFlight();
+  public String displaySearchBooking(Model model) {
+    model.addAttribute("airports", bookingService.getAllAirports());
     return "homepage/home";
   }
 }

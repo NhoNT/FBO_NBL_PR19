@@ -54,18 +54,9 @@
                                 <div class="input-field">
                                     <label for="date-end">FROM: </label>
                                     <select class="form-control" id="sel1">
-                                        <option>Da Nang</option>
-                                        <option>Ha Noi</option>
-                                        <option>Ho Chi Minh</option>
-                                        <option>Nha Trang</option>
-                                        <option>Da Lat</option>
-                                        <option>Ca Mau</option>
-                                        <option>Can Tho</option>
-                                        <option>Phu Quoc</option>
-                                        <option>Quy Nhon</option>
-                                        <option>Hue</option>
-                                        <option>Thanh Hoa</option>
-                                        <option>Buon Me Thuot</option>
+                                      <c:forEach var="airport" items="${airports}">
+                                        <option>${airport.location}</option>
+                                      </c:forEach>
                                     </select>
                                 </div>
                             </div>
@@ -73,18 +64,9 @@
                                 <div class="input-field">
                                     <label for="date-end">TO: </label>
                                     <select class="form-control" id="sel1">
-                                        <option>Da Nang</option>
-                                        <option>Ha Noi</option>
-                                        <option>Ho Chi Minh</option>
-                                        <option>Nha Trang</option>
-                                        <option>Da Lat</option>
-                                        <option>Ca Mau</option>
-                                        <option>Can Tho</option>
-                                        <option>Phu Quoc</option>
-                                        <option>Quy Nhon</option>
-                                        <option>Hue</option>
-                                        <option>Thanh Hoa</option>
-                                        <option>Buon Me Thuot</option>
+                                      <c:forEach var="airport" items="${airports}">
+                                        <option>${airport.location}</option>
+                                      </c:forEach>
                                     </select>
                                 </div>
                             </div>
