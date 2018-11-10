@@ -21,9 +21,9 @@ public class SpringConfig {
   public DataSource dataSource() {
     DriverManagerDataSource dataSource = new DriverManagerDataSource();
     dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-    dataSource.setUrl("jdbc:mysql://localhost:3306/fbodb");
+    dataSource.setUrl("jdbc:mysql://localhost:3306/fightbookdb");
     dataSource.setUsername("root");
-    dataSource.setPassword("rootiviettech");
+    dataSource.setPassword("binh123");
     return dataSource;
   }
 

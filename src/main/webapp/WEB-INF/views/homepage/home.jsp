@@ -5,30 +5,46 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Flight Booking Online</title>
-    <base href="${pageContext.request.getContextPath()}/resources/app/">
-    <link type="text/css" rel="stylesheet" href="${pageContext.request.getContextPath()}/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link href="${pageContext.request.getContextPath()}/resources/app/css/newcss.css" rel="stylesheet" type="text/css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-      /* Remove the navbar's default margin-bottom and rounded borders */ 
-      .navbar {
-        margin-bottom: 0;
-        border-radius: 0;
-      }
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Flight Booking Online</title>
+        <base href="${pageContext.request.getContextPath()}/resources/app/">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="${pageContext.request.getContextPath()}/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link href="${pageContext.request.getContextPath()}/resources/app/css/newcss.css" rel="stylesheet" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            /* Remove the navbar's default margin-bottom and rounded borders */ 
+            .navbar {
+                margin-bottom: 0;
+                border-radius: 0;
+            }
 
-      /* Add a gray background color and some padding to the footer */
-      footer {
-        background-color: #f2f2f2;
-        padding: 25px;
-      }
+            /* Add a gray background color and some padding to the footer */
+            footer {
+                background-color: #f2f2f2;
+                padding: 25px;
+            }
+        </style>
 
-    </style>
+        <script>
+
+            $(document).ready(function () {
+                $("#l1").click(function () {
+                    $("#arr").hide();
+     
+                });
+                $("#l2").click(function () {
+                    $("#arr").show();
+  
+                });
+            })
+                    ;
+
+        </script>
     </head>
     <body style="width: 80%; margin: auto">
 
@@ -60,34 +76,25 @@
         <div class="container-fluid bg-3 text-center" >    
 
             <div class="row">
-                <div class="tab-content  col-xs-12 col-sm-6" style="background-color: #99ccff; padding: 10px; padding-bottom: 33px " >
-                    <img src="img/iconmaybay.png" style="width: 30px ; height: 40px" alt=""/> <h3>SEARCH FLIGHTS</h3>
-                    
-                    
+                <div class="tab-content  col-xs-12 col-sm-6" style="background-color: #99ccff;  padding-bottom:8px;padding-right:  10px;; padding-left: 10px; " >
+                    <h3>SEARCH FLIGHTS</h3>
+
                     <div class="header">
-                                     <p class="input_left">
-                                        <input name="direction" id="loaive_o" value="0" onclick="disabledate(0)" type="radio" class="loaive" checked="checked">
-                                        <input name="trip_select_hidden" id="trip_select_hidden" type="hidden" value="1">
-                                        
-                                        <label for="loaive_o"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="">One-way</font></font></label>
-                             
-                                        <input name="direction" id="loaive_r" onclick="disabledate(1);" value="1" type="radio" class="loaive">
-                                    
-                                        <label for="loaive_r"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Round-trip</font></font></label>
-                                     </p> 
-                             </div>
-                    
-                    
-                     
+                        <a id="l1" class="btn btn-primary" >One way</a>
+                        <a id="l2" class="btn btn-primary">Round trip</a>
+                    </div>
+
+
+
                     <div role="tabpanel" class="tab-pane active" id="flights">
                         <div class="row">
                             <div class="col-xxs-12 col-xs-6 mt">
                                 <div class="input-field">
                                     <label for="date-end">FROM: </label>
                                     <select class="form-control" id="sel1">
-                                      <c:forEach var="airport" items="${airports}">
-                                        <option>${airport.location}</option>
-                                      </c:forEach>
+                                        <c:forEach var="airport" items="${airports}">
+                                            <option>${airport.location}</option>
+                                        </c:forEach>
                                     </select>
                                 </div>
                             </div>
@@ -95,9 +102,9 @@
                                 <div class="input-field">
                                     <label for="date-end">TO: </label>
                                     <select class="form-control" id="sel1">
-                                      <c:forEach var="airport" items="${airports}">
-                                        <option>${airport.location}</option>
-                                      </c:forEach>
+                                        <c:forEach var="airport" items="${airports}">
+                                            <option>${airport.location}</option>
+                                        </c:forEach>
                                     </select>
                                 </div>
                             </div>
@@ -108,7 +115,7 @@
                                 </div>
                             </div>
                             <div class="col-xxs-12 col-xs-6 mt alternate">
-                                <div class="input-field">
+                                <div class="input-field" id="arr" hidden>
                                     <label for="date-end">Arrive:</label>
                                     <input type="date" class="form-control" id="date-end" placeholder="mm/dd/yyyy">
                                 </div>
@@ -154,13 +161,13 @@
                         </ol>
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                        
-                         <img  src="img/8.jpg" alt=""/>  
-                              
+
+                                <img  src="img/8.jpg" alt=""/>  
+
                                 <div class="carousel-caption">The is a new first slide</div>
                             </div>
                             <div class="item">
-                                
+
                                 <img  src="img/8.jpg" alt=""/>  
                                 <div class="carousel-caption">The is the second slide</div>
                             </div>
@@ -203,7 +210,7 @@
                                                     <div class="card__header">
                                                         <p class="card__pre-title">Ha Noi</p>
                                                         <h3 class="card__title">Sale Flights Ha Noi</h3>
-                                                        
+
                                                         </p>
 
                                                         <strong class="card__price"><span class="currency">1.467.902 VNĐ</span></strong>
@@ -217,7 +224,7 @@
                                                 <div class="card__img-container reponsive-ratio reponsive-ratio--8_5">
                                                     <img src="http://hoanggh.com/wp-content/uploads/2017/07/thac-7-tang-GSV-Travel.jpg" alt="DaLat" class="reponsive-ratio__media">
                                                     <p class="card__sash">
-                                                       Sale <span class="card__sash-emphasis">15%</span> 
+                                                        Sale <span class="card__sash-emphasis">15%</span> 
 
                                                     </p>
                                                 </div>
@@ -240,7 +247,7 @@
                                                 <div class="card__img-container reponsive-ratio reponsive-ratio--8_5">
                                                     <img src="http://danangtours.com.vn/en/wp-content/uploads/2016/04/da-nang-tours.jpg" alt="DaNang" class="reponsive-ratio__media">
                                                     <p class="card__sash">
-                                                      Sale <span class="card__sash-emphasis">20%</span> 
+                                                        Sale <span class="card__sash-emphasis">20%</span> 
 
                                                     </p>
                                                 </div>
@@ -263,7 +270,7 @@
                                                 <div class="card__img-container reponsive-ratio reponsive-ratio--8_5">
                                                     <img src="https://tintaynguyen.com/wp-content/uploads/2015/05/ve-may-bay-di-buon-ma-thuot-1024x680.jpg" alt="Buon Me Thuot" class="reponsive-ratio__media">
                                                     <p class="card__sash">
-                                                       Sale <span class="card__sash-emphasis">10%</span> 
+                                                        Sale <span class="card__sash-emphasis">10%</span> 
 
                                                     </p>
                                                 </div>
@@ -271,7 +278,7 @@
                                                     <div class="card__header">
                                                         <p class="card__pre-title">Buon Me Thuot</p>
                                                         <h3 class="card__title">Sale Flights Buon Me Thuot</h3>
-                                                       
+
                                                         </p>
 
                                                         <strong class="card__price"><span class="currency">1.180.846 VNĐ</span></strong>
