@@ -16,6 +16,11 @@ public class BookingController {
   @RequestMapping(value = "displaySearch")
   public String displaySearchBooking(Model model) {
     model.addAttribute("airports", bookingService.getAllAirports());
-    return "homepage/home";
+    return "booking/search";
+  }
+
+  @RequestMapping(value = "processSearch")
+  public String processSearchBooking(Model model) {
+    return "booking/select-filght";
   }
 }
