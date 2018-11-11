@@ -157,6 +157,7 @@
                         <ol class="carousel-indicators">
                             <li data-target="#custom-bootstrap-carousel" data-slide-to="0" class="active"></li>
                             <li data-target="#custom-bootstrap-carousel" data-slide-to="1"></li>
+                            <li data-target="#custom-bootstrap-carousel" data-slide-to="2"></li>
 
                         </ol>
                         <div class="carousel-inner" role="listbox">
@@ -164,12 +165,18 @@
 
                                 <img  src="img/8.jpg" alt=""/>  
 
-                                <div class="carousel-caption">The is a new first slide</div>
+                                <div class="carousel-caption"></div>
                             </div>
                             <div class="item">
+                                
+                                <img  src="img/banner1.jpg" alt=""/>  
+                                <div class="carousel-caption"></div>
+                            </div>
+                            
+                            <div class="item">
 
-                                <img  src="img/8.jpg" alt=""/>  
-                                <div class="carousel-caption">The is the second slide</div>
+                                <img  src="img/banner2.jpg" alt=""/>  
+                                <div class="carousel-caption"></div>
                             </div>
 
 
@@ -190,7 +197,7 @@
 
                                 <h2 class="section-title clearfix" style="margin-bottom: 8px;">
                                     Hot Deals On Flights
-                                    <a href="http://www.agoda.vn" target="_blank" class="icon-hover icon-text icon-text--rev icon-text--s1 section-title__link">View all flights
+                                    <a href="https://www.elines.vn/" target="_blank" class="icon-hover icon-text icon-text--rev icon-text--s1 section-title__link">View all flights
 
                                     </a>
                                 </h2>
@@ -200,7 +207,7 @@
                                         <a target="_blank" href="http://www.agoda.com/vi-vn/partners/xml2012_landing.aspx?siteid=1604047&amp;currency=VND&amp;asq=HYIrr9YPF%2bxSQOAH8tE9UiTywPa7Psm9wmypt8eSKbrNuJqYJoXEZCcBCWEFQzZaqBSvmg5GxcKhjC1IF%2b7jKOxHVL3LpV5wkXI%2bUbjDyoFnSxROs%2fHFDYx1Zn9%2f21Xwgtxxh0HZ6X%2bM6gl%2bKCNja6vkIMphREIgoqgKN5rvVJo%3d&amp;tag=hh" class="card card-agoda ">
                                             <figure class="card__container js-eq-height-item" style="">
                                                 <div class="card__img-container reponsive-ratio reponsive-ratio--8_5">
-                                                    <img src="http://cuocsongmienbac.com/wp-content/uploads/2018/09/iStock_83360441_MEDIUM.jpg" alt="HaNoi" class="reponsive-ratio__media">
+                                                    <img src="img/hanoi.jpg" alt="HaNoi" class="reponsive-ratio__media">
                                                     <p class="card__sash">
                                                         Sale <span class="card__sash-emphasis">10%</span> 
 
@@ -222,7 +229,7 @@
                                         <a target="_blank" href="http://www.agoda.com/vi-vn/partners/xml2012_landing.aspx?siteid=1604047&amp;currency=VND&amp;asq=HYIrr9YPF%2bxSQOAH8tE9UiTywPa7Psm9wmypt8eSKbrNuJqYJoXEZCcBCWEFQzZaqBSvmg5GxcKhjC1IF%2b7jKIG7PsP2npAOyXYNB3jjC2i4y5wVkIU24oFMuhlhP1ZCEsZWOppyeBdlJwf4LvjZ1Cy93L5UJw7FCvVs5ghIrGU%3d&amp;tag=hh" class="card card-agoda ">
                                             <figure class="card__container js-eq-height-item" style="">
                                                 <div class="card__img-container reponsive-ratio reponsive-ratio--8_5">
-                                                    <img src="http://hoanggh.com/wp-content/uploads/2017/07/thac-7-tang-GSV-Travel.jpg" alt="DaLat" class="reponsive-ratio__media">
+                                                    <img src="img/dalat.jpg" alt="DaLat" class="reponsive-ratio__media">
                                                     <p class="card__sash">
                                                         Sale <span class="card__sash-emphasis">15%</span> 
 
@@ -245,7 +252,7 @@
                                         <a target="_blank" href="http://www.agoda.com/vi-vn/partners/xml2012_landing.aspx?siteid=1604047&amp;currency=VND&amp;asq=HYIrr9YPF%2bxSQOAH8tE9UiTywPa7Psm9wmypt8eSKbrNuJqYJoXEZCcBCWEFQzZaqBSvmg5GxcKhjC1IF%2b7jKNxwkkU%2fkaPpGTPlZmWHmglnSxROs%2fHFDYx1Zn9%2f21Xwgtxxh0HZ6X%2bM6gl%2bKCNja6vkIMphREIgoqgKN5rvVJo%3d&amp;tag=hh" class="card card-agoda ">
                                             <figure class="card__container js-eq-height-item" style="">
                                                 <div class="card__img-container reponsive-ratio reponsive-ratio--8_5">
-                                                    <img src="http://danangtours.com.vn/en/wp-content/uploads/2016/04/da-nang-tours.jpg" alt="DaNang" class="reponsive-ratio__media">
+                                                    <img src="img/danang.jpg" alt="DaNang" class="reponsive-ratio__media">
                                                     <p class="card__sash">
                                                         Sale <span class="card__sash-emphasis">20%</span> 
 
@@ -253,7 +260,7 @@
                                                 </div>
                                                 <figcaption class="card__profile">
                                                     <div class="card__header">
-                                                        <p class="card__pre-title">DaNang</p>
+                                                        <p class="card__pre-title">Da Nang</p>
                                                         <h3 class="card__title">Sale Flights Da Nang</h3>
                                                         </p>
 
@@ -268,7 +275,7 @@
                                         <a target="_blank" href="http://www.agoda.com/vi-vn/partners/xml2012_landing.aspx?siteid=1604047&amp;currency=VND&amp;asq=HYIrr9YPF%2bxSQOAH8tE9UiTywPa7Psm9wmypt8eSKbrNuJqYJoXEZCcBCWEFQzZaqBSvmg5GxcKhjC1IF%2b7jKOPpOWph24Ni04hwj5gGWf5nSxROs%2fHFDYx1Zn9%2f21Xwgtxxh0HZ6X%2bM6gl%2bKCNja6vkIMphREIgoqgKN5rvVJo%3d&amp;tag=hh" class="card card-agoda ">
                                             <figure class="card__container js-eq-height-item" style="">
                                                 <div class="card__img-container reponsive-ratio reponsive-ratio--8_5">
-                                                    <img src="https://tintaynguyen.com/wp-content/uploads/2015/05/ve-may-bay-di-buon-ma-thuot-1024x680.jpg" alt="Buon Me Thuot" class="reponsive-ratio__media">
+                                                    <img src="img/saigon.jpg" alt="Sai Gon" class="reponsive-ratio__media">
                                                     <p class="card__sash">
                                                         Sale <span class="card__sash-emphasis">10%</span> 
 
@@ -276,8 +283,8 @@
                                                 </div>
                                                 <figcaption class="card__profile">
                                                     <div class="card__header">
-                                                        <p class="card__pre-title">Buon Me Thuot</p>
-                                                        <h3 class="card__title">Sale Flights Buon Me Thuot</h3>
+                                                        <p class="card__pre-title">Sai Gon</p>
+                                                        <h3 class="card__title">Sale Flights Sai Gon</h3>
 
                                                         </p>
 
