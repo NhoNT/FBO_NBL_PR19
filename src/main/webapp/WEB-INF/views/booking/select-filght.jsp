@@ -16,12 +16,14 @@
     </head>
     <body>
 
+         <body>
+
         <div id="container">
             <input type="hidden" name="DebugID" value="10">
             <div id="header">
                 <div id="banner">
-                    <div class="logo">
-                        <a href="http://www.vietjetair.com/Sites/Web/vi-VN/Home"><img alt="logo" src="https://d3dh07ymq581.cloudfront.net/images/logo.png"></a>
+                    <div class="banner">
+                        <img alt="banner" src="img/banner3.jpg">
                     </div>
                 </div><!--End banner-->
             </div><!--End header-->
@@ -30,7 +32,17 @@
 
 
             <!-- Progress bar -->
-            <div id="step_header"><ul id="new_progress" style="background-color: #99ccff;"><li class="wasselected">Ngày</li><li class="isselected">Chuyến bay</li><li class="unselected">Hành khách</li><li class="unselected">Dịch vụ</li><li class="unselected">Thanh toán</li><li class="unselected">Xác nhận</li><li class="unselected">Hoàn thành</li></ul></div>
+            <div id="step_header">
+                <ul id="new_progress" style="background-color: #99ccff;">
+                    <li class="wasselected">Ngày</li>
+                    <li class="isselected">Chuyến bay</li>
+                    <li class="unselected">Hành khách</li>
+                    <li class="unselected">Dịch vụ</li>
+                    <li class="unselected">Thanh toán</li>
+                    <li class="unselected">Xác nhận</li>
+                    <li class="unselected">Hoàn thành</li>
+                </ul>
+            </div>
 
 
             <form method="post" action="./TravelOptions.aspx?lang=vi&amp;st=pb&amp;sesid=" id="TravelOptions" admicro-data-event="TravelOptions" admicro-data-auto="0" admicro-data-order="false">
@@ -60,10 +72,11 @@
                     <h3 style=" font-weight: normal; font-size: 13px; ">Prices shown are in VND All the hours are local time at the airport.</h3>
 
                     <div style="height: 20px"></div>
-                    <h1 class="bg1" style="height: 50px; width: 650px;">Depart<img src="https://d3dh07ymq581.cloudfront.net/images/flightdep.png">Ho Chi Minh (SGN) To Ha Noi (HAN)</h1>
-                    <div id="toDepDiv">
+                    
+                    <div id="toDepDiv" style="margin: auto; width: 55%;">
+                        <h1 class="bg1" style="height: 50px; width: 650px;">Depart <img src="https://d3dh07ymq581.cloudfront.net/images/flightdep.png" alt="">Ho Chi Minh (SGN) To Ha Noi (HAN)</h1>
                         <div id="travOpsMain">
-                            <table class="TrvOptGrid" cellspacing="0" cellpadding="0" align="center">
+                            <table class="TrvOptGrid" cellspacing="0" cellpadding="0" align="center" style="font-size: 125%">
                                 <tbody><tr>
                                         <td colspan="7"></td>
                                     </tr>
@@ -71,23 +84,23 @@
                                         <td colspan="7">&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td colspan="5">
+                                        <td colspan="6">
                                             <b>11/11/2018 Sun</b>
                                         </td>
                                         <td class="toPrev"><a href="javascript:document.forms['TravelOptions'].PN.value='dp';SubmitForm();"><span>&lt;&lt;</span>Previous </a></td>
-                                        <td class="toNext"><a href="javascript:document.forms['TravelOptions'].PN.value='dn';SubmitForm();">Next <span>&gt;&gt;</span></a></td>		
+                                        <td class="toNext"><a href="javascript:document.forms['TravelOptions'].PN.value='dn';SubmitForm();">Next<span>&gt;&gt;</span></a></td>		
                                     </tr>
                                     <tr>
                                         <td colspan="7">&nbsp;</td>
                                     </tr>
-                                    <tr valign="top" id="TrvOptGridHdr">
-                                        <td width="90px" align="center" class="Hdr"><b>Flight date</b></td>
-                                        <td width="80px" align="center" class="Hdr"><b>Start</b></td>
-                                        <td width="86px" align="center" class="Hdr"><b>Come </b></td>
-                                        <td width="80px" align="center" class="Hdr"><b>Flight</b></td>
-                                        <td width="104px" align="center" class="Hdr"><b>Promo</b></td>
-                                        <td width="110px" align="center" class="Hdr"><b>Economy</b></td>
-                                        <td width="110px" align="center" class="Hdr"><b>Premium</b></td>
+                                    <tr align="top" id="TrvOptGridHdr" style="font-weight: bold; text-align: center">
+                                        <td width="110px" class="Hdr">Flight date</td>
+                                        <td width="90px" class="Hdr">Start</td>
+                                        <td width="96px" class="Hdr">Come</td>
+                                        <td width="90px" class="Hdr">Flight</td>
+                                        <td width="114px" class="Hdr">Promo</td>
+                                        <td width="110px" class="Hdr">Economy</td>
+                                        <td width="110px" class="Hdr">Premium</td>
                                     </tr>
                                     <tr>
                                         <td colspan="7"><hr></td>
@@ -97,18 +110,19 @@
                                             <!-- Flights-->
                                             <table cellspacing="0" cellpadding="0" class="FlightsGrid" style="width:100%">
 
-                                                <tbody><tr class="gridFlightEvenchecked" id="gridTravelOptDep1">
+                                                <tbody>
+                                                    <tr class="gridFlightEvenchecked" id="gridTravelOptDep1">
                                                         <td colspan="3">
                                                             <table width="330px" cellspacing="0" cellpadding="0">				
-                                                                <tbody><tr class="gridFlightEven">
+                                                                <tbody>
+                                                                    <tr class="gridFlightEven">
                                                                         <td width="110px" style="padding:0px 1px" align="center" class="SegInfo">11/11/2018 Sun</td>
                                                                         <td width="110px" style="padding:0px 1px" align="center" class="SegInfo">18:40&nbsp;SGN<br>Ho Chi Minh</td>
                                                                         <td width="110px" style="padding:0px 1px" align="center" class="SegInfo">20:45&nbsp;HAN<br>Ha Noi</td>
                                                                         <td width="110px" style="padding:0px 1px" align="center" class="SegInfo"><span class="airlineVJ">VJ192</span><br>2h 5m</td>
                                                                     </tr>
-
-
-                                                                </tbody></table>
+                                                                </tbody>
+                                                            </table>
                                                         </td>
                                                         <td colspan="3">
                                                             <table width="330px" class="FaresGrid" cellspacing="0" cellpadding="0">
@@ -674,25 +688,40 @@
                                                                             <input type="radio" id="gridTravelOptDep" name="gridTravelOptDep" value="12,V_SBoss,O" onclick="toORChk('V_SBoss', 'O', 'd');SelectTravOpt(this);">
                                                                             3,400,000 VND
                                                                         </td>
+
                                                                     </tr>    
+
                                                                 </tbody></table>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td colspan="6"><hr></td>
                                                     </tr>
-                                                </tbody>
-                                            </table>        
+
+
+                                                </tbody></table>        
                                         </td>        
                                     </tr>
                                 </tbody></table>
                         </div>
                     </div>
+
+
                     <p class="author"></p>
                     <div class="clear"></div>
                 </div><!--End footer-->
                 <div class="clear"></div>
             </form>
+            
+           <div id="submitairline" class="" style="display: block;">
+                        <div class="button">
+                            <input type="submit" id="selectnd" value="Next">
+                        </div>
+                    </div>
+            
         </div>
+        <footer style="background-color: buttonface">
+            <p>Copyright © 2018 Booking flight</p>
+        </footer>
     </body>
 </html>
