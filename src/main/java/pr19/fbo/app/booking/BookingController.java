@@ -19,8 +19,21 @@ public class BookingController {
     return "homepage/home";
   }
 
+  @RequestMapping(value = "displaySearch1")
+  public String displaySearchBooking1(Model model, BookingInputForm bookingInputForm) {
+    model.addAttribute("airports", bookingService.getAllAirports());
+    bookingInputForm.setAdultNumber("2");
+    model.addAttribute("bookingInputForm", bookingInputForm);
+    return "booking/displaySearch";
+  }
+
   @RequestMapping(value = "processSearch")
-  public String processSearchBooking(Model model) {
+  public String processSearchBooking(Model model, BookingInputForm bookingInputForm) {
+    System.out.println(bookingInputForm.getDepartureAirportCode());
+    System.out.println(bookingInputForm.getArriveAirportCode());
+    System.out.println(bookingInputForm.getDepartureDate());
+    // For test "DN01", "HN01", "2018-11-22"
+    model.addAttribute("airports", bookingService.getFlightsForBooking(bookingInputForm.getDepartureAirportCode(), bookingInputForm.getArriveAirportCode(), bookingInputForm.getDepartureDate()));
     return "booking/select-filght";
   }
 }
