@@ -1,10 +1,14 @@
 package pr19.fbo.app.booking;
 
+import java.time.LocalDate;
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class BookingInputForm {
 
   private String departureAirportCode;
   private String arriveAirportCode;
-  private String departureDate;
+  @DateTimeFormat(pattern = "yyyy-MM-dd")
+  private LocalDate departureDate;
   private String returnDate;
   private String ClassOfChair;
   private String AdultNumber;
@@ -30,11 +34,11 @@ public class BookingInputForm {
     this.arriveAirportCode = arriveAirportCode;
   }
 
-  public String getDepartureDate() {
+  public LocalDate getDepartureDate() {
     return departureDate;
   }
 
-  public void setDepartureDate(String departureDate) {
+  public void setDepartureDate(LocalDate departureDate) {
     this.departureDate = departureDate;
   }
 

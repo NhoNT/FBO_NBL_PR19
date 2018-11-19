@@ -12,6 +12,6 @@ public interface BookingService {
 
   public List<FlightEntity> getFlightsByRoute();
 
-  public List<FlightEntity> getFlightsForBooking(String departureAirportCode, String arriveAirportCode, String departureDate);
+  public List<FlightEntity> getFlightsForBooking(String departureAirportCode, String arriveAirportCode, String departureDate, int quantityEconomy, int quantityBusiness);
 
 }

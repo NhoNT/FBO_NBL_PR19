@@ -6,7 +6,7 @@
     <title>Display Search</title>
   </head>
   <body>
-    <form:form method="GET" modelAttribute="bookingInputForm" action="${pageContext.request.contextPath}/booking/processSearch">
+    <form:form method="GET" modelAttribute="bookingInputForm" action="${pageContext.request.contextPath}/booking/processSearch1">
       departureAirportCode: <form:input path="departureAirportCode" /><br>
       arriveAirportCode: <form:input path="arriveAirportCode" /><br>
       departureDate: <form:input path="departureDate" /><br>

@@ -26,6 +26,7 @@ public class BookingServiceImpl implements BookingService {
     return airportEntitys;
   }
 
+  @Override
   public List<FlightEntity> getAllFlights() {
     List<FlightEntity> flightList = (List<FlightEntity>) flightRepository.findAll();
     for (FlightEntity flightEntity : flightList) {
@@ -34,12 +35,14 @@ public class BookingServiceImpl implements BookingService {
     return flightList;
   }
 
+  @Override
   public List<FlightEntity> getFlightsByRoute() {
     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
   }
 
-  public List<FlightEntity> getFlightsForBooking(String departureAirportCode, String arriveAirportCode, String departureDate) {
-    List<FlightEntity> flightList = (List<FlightEntity>) flightRepository.findFlights(departureAirportCode, arriveAirportCode, departureDate);
+  @Override
+  public List<FlightEntity> getFlightsForBooking(String departureAirportCode, String arriveAirportCode, String departureDate, int quantityEconomy, int quantityBusiness) {
+    List<FlightEntity> flightList = (List<FlightEntity>) flightRepository.findFlights(departureAirportCode, arriveAirportCode, departureDate, quantityEconomy, quantityBusiness);
     for (FlightEntity flightEntity : flightList) {
       System.out.println(flightEntity.getRoute().getDepartureAirport().getLocation() + " - " + flightEntity.getRoute().getArriveAirport().getLocation());
       System.out.println("Business: " + flightEntity.getAircraft().getQuantityBusiness() + " - " + "Economy: " + flightEntity.getAircraft().getQuantityEconomy());
