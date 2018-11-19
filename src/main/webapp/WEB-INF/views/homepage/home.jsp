@@ -65,7 +65,7 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="${pageContext.request.getContextPath()}/customer/register"><span class="glyphicon glyphicon-log-in"></span>Register</a></li>
+                        <li><a href="${pageContext.request.getContextPath()}/customer/register"><span class="glyphicon glyphicon-log-in"></span> Register</a></li>
                     </ul>
                 </div>
             </div>

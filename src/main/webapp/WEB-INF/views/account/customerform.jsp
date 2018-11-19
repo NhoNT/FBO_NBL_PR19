@@ -1,8 +1,4 @@
-<%-- 
-    Document   : book
-    Created on : 28/09/2018, 7:14:18 PM
-    Author     : MacBook Air
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="mvc"%>
@@ -21,8 +17,6 @@
 
                 width: 100%;
             }
-
-
             #aa{
                 padding-left: 25%;
             }
@@ -45,7 +39,6 @@
                     <mvc:form action="${pageContext.request.getContextPath()}/customer/register" method="post" modelAttribute="customer" class="form-horizontal">
                         <div id="aa"> 
 
-
                             <div class="form-group">
 
                                 <div class="col-xs-8 col-sm-8">
@@ -53,44 +46,49 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-xs-4 col-sm-2 control-label">firstname</label>
-                                <div class="col-xs-8 col-sm-8">
-                                    <mvc:input path="firstname" value= "${customer.firstname}"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-xs-4 col-sm-2 control-label">lastname</label>
-                                <div class="col-xs-8 col-sm-8">
-                                    <mvc:input path="lastname" value= "${customer.lastname}"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-xs-4 col-sm-2 control-label">phone</label>
-                                <div class="col-xs-8 col-sm-8">
-                                    <mvc:input path="phone" value= "${customer.phone}"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-xs-4 col-sm-2 control-label">Email</label>
-                                <div class="col-xs-8 col-sm-8">
-                                    <mvc:input path="email" value= "${customer.email}"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-xs-4 col-sm-2 control-label">username</label>
+                                <label class="col-xs-4 col-sm-2 control-label">Username: (*)</label>
                                 <div class="col-xs-8 col-sm-8">
                                     <mvc:input path="username" value= "${customer.username}"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-xs-4 col-sm-2 control-label">password</label>
+                                <label class="col-xs-4 col-sm-2 control-label">Email: (*)</label>
+                                <div class="col-xs-8 col-sm-8">
+                                    <mvc:input path="email" value= "${customer.email}"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-4 col-sm-2 control-label">Firstname: (*)</label>
+                                <div class="col-xs-8 col-sm-8">
+                                    <mvc:input path="firstname" value= "${customer.firstname}"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-4 col-sm-2 control-label">Lastname: (*)</label>
+                                <div class="col-xs-8 col-sm-8">
+                                    <mvc:input path="lastname" value= "${customer.lastname}"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-4 col-sm-2 control-label">Phone: (*)</label>
+                                <div class="col-xs-8 col-sm-8">
+                                    <mvc:input path="phone" value= "${customer.phone}"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-xs-4 col-sm-2 control-label">Password: (*)</label>
                                 <div class="col-xs-8 col-sm-8">
                                     <mvc:input path="password" value= "${customer.password}"/>
                                 </div>
                             </div>
-
-            
-
+                            
+                              <div class="form-group">
+                                <label class="col-xs-4 col-sm-2 control-label">Enter Password: (*)</label>
+                                <div class="col-xs-8 col-sm-8">
+                                    <mvc:input path="enterpassword" value= "${customer.password}"/>
+                                </div>
+                            </div>   
                         </div>
                         <div class="form-group" style="text-align: center">
                             <input id="a" type="submit" value="Submit" class="btn btn-primary" />

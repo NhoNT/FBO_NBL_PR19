@@ -14,15 +14,30 @@ import javax.persistence.Table;
 @Table(name = "customer")
 public class CustomerEntity implements Serializable {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int customerId;	;
-  private String firstname;
-  private String lastname;
-  private String phone;
-  private String email;
-  private String username;
-  private String password;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int customerId;
+    private String username;
+    private String email;
+    private String firstname;
+    private String lastname;
+    private String phone;
+    private String password;
+    private String enterpassword;
+
+    public CustomerEntity() {
+    }
+
+    public CustomerEntity(int customerId, String username, String email, String firstname, String lastname, String phone, String password, String enterpassword) {
+        this.customerId = customerId;
+        this.username = username;
+        this.email = email;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.phone = phone;
+        this.password = password;
+        this.enterpassword = enterpassword;
+    }
 
     public int getCustomerId() {
         return customerId;
@@ -30,6 +45,22 @@ public class CustomerEntity implements Serializable {
 
     public void setCustomerId(int customerId) {
         this.customerId = customerId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getFirstname() {
@@ -56,22 +87,6 @@ public class CustomerEntity implements Serializable {
         this.phone = phone;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -80,4 +95,12 @@ public class CustomerEntity implements Serializable {
         this.password = password;
     }
 
+    public String getEnterpassword() {
+        return enterpassword;
+    }
+
+    public void setEnterpassword(String enterpassword) {
+        this.enterpassword = enterpassword;
+    }
+    
 }

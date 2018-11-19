@@ -34,17 +34,14 @@
             <!-- Progress bar -->
             <div id="step_header">
                 <ul id="new_progress" style="background-color: #99ccff;">
-                    <li class="wasselected">Ngày</li>
-                    <li class="isselected">Chuyến bay</li>
-                    <li class="unselected">Hành khách</li>
-                    <li class="unselected">Dịch vụ</li>
-                    <li class="unselected">Thanh toán</li>
-                    <li class="unselected">Xác nhận</li>
-                    <li class="unselected">Hoàn thành</li>
+                    <li class="wasselected">1 TÌM VÉ</li>
+                    <li class="isselected">2 LỰA CHỌN VÉ</li>
+                    <li class="unselected">3 THÔNG TIN KHÁCH</li>
+                    <li class="unselected">4 THANH TOÁN</li>
+                    <li class="unselected">5 XÁC NHẬN</li>
+                    <li class="unselected">6 HOÀN THÀNH</li>
                 </ul>
             </div>
-
-
             <form method="post" action="./TravelOptions.aspx?lang=vi&amp;st=pb&amp;sesid=" id="TravelOptions" admicro-data-event="TravelOptions" admicro-data-auto="0" admicro-data-order="false">
                 <div class="aspNetHidden">
                     <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTk0ODgyNTI1M2Rkq1Bh4bo5ENjEkdxhNEh6Rk3dW4o=">
@@ -257,7 +254,6 @@
                                                         <td colspan="6"><hr></td>
                                                     </tr>
 
-
                                                     <tr class="gridFlightOdd" id="gridTravelOptDep4">
                                                         <td colspan="3">
                                                             <table width="330px" cellspacing="0" cellpadding="0">				
@@ -305,8 +301,6 @@
                                                     <tr>
                                                         <td colspan="6"><hr></td>
                                                     </tr>
-
-
                                                     <tr class="gridFlightEven" id="gridTravelOptDep5">
                                                         <td colspan="3">
                                                             <table width="330px" cellspacing="0" cellpadding="0">				
@@ -316,8 +310,6 @@
                                                                         <td width="110px" style="padding:0px 1px" align="center" class="SegInfo">21:40&nbsp;HAN<br>Ha Noi</td>
                                                                         <td width="110px" style="padding:0px 1px" align="center" class="SegInfo"><span class="airlineVJ">VJ190</span><br>2h 5m</td>
                                                                     </tr>
-
-
                                                                 </tbody></table>
                                                         </td>
                                                         <td colspan="3">
@@ -345,17 +337,13 @@
                                                                             <input type="radio" id="gridTravelOptDep" name="gridTravelOptDep" value="5,V_SBoss,O" onclick="toORChk('V_SBoss', 'O', 'd');SelectTravOpt(this);">
                                                                             3,400,000 VND
                                                                         </td>
-
                                                                     </tr>    
-
                                                                 </tbody></table>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td colspan="6"><hr></td>
                                                     </tr>
-
-
                                                     <tr class="gridFlightOdd" id="gridTravelOptDep6">
                                                         <td colspan="3">
                                                             <table width="330px" cellspacing="0" cellpadding="0">				
@@ -365,8 +353,6 @@
                                                                         <td width="110px" style="padding:0px 1px" align="center" class="SegInfo">22:05&nbsp;HAN<br>Ha Noi</td>
                                                                         <td width="110px" style="padding:0px 1px" align="center" class="SegInfo"><span class="airlineVJ">VJ184</span><br>2h 5m</td>
                                                                     </tr>
-
-
                                                                 </tbody></table>
                                                         </td>
                                                         <td colspan="3">
@@ -394,17 +380,13 @@
                                                                             <input type="radio" id="gridTravelOptDep" name="gridTravelOptDep" value="6,V_SBoss,O" onclick="toORChk('V_SBoss', 'O', 'd');SelectTravOpt(this);">
                                                                             3,400,000 VND
                                                                         </td>
-
                                                                     </tr>    
-
                                                                 </tbody></table>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td colspan="6"><hr></td>
                                                     </tr>
-
-
                                                     <tr class="gridFlightEven" id="gridTravelOptDep7">
                                                         <td colspan="3">
                                                             <table width="330px" cellspacing="0" cellpadding="0">				
@@ -414,8 +396,6 @@
                                                                         <td width="110px" style="padding:0px 1px" align="center" class="SegInfo">22:20&nbsp;HAN<br>Ha Noi</td>
                                                                         <td width="110px" style="padding:0px 1px" align="center" class="SegInfo"><span class="airlineVJ">VJ162</span><br>2h 5m</td>
                                                                     </tr>
-
-
                                                                 </tbody></table>
                                                         </td>
                                                         <td colspan="3">
@@ -443,7 +423,6 @@
                                                                             <input type="radio" id="gridTravelOptDep" name="gridTravelOptDep" value="7,V_SBoss,O" onclick="toORChk('V_SBoss', 'O', 'd');SelectTravOpt(this);">
                                                                             3,400,000 VND
                                                                         </td>
-
                                                                     </tr>    
 
                                                                 </tbody></table>
@@ -463,8 +442,6 @@
                                                                         <td width="110px" style="padding:0px 1px" align="center" class="SegInfo">23:35&nbsp;HAN<br>Ha Noi</td>
                                                                         <td width="110px" style="padding:0px 1px" align="center" class="SegInfo"><span class="airlineVJ">VJ170</span><br>2h 5m</td>
                                                                     </tr>
-
-
                                                                 </tbody></table>
                                                         </td>
                                                         <td colspan="3">
@@ -501,8 +478,7 @@
                                                     <tr>
                                                         <td colspan="6"><hr></td>
                                                     </tr>
-
-
+                                                    
                                                     <tr class="gridFlightEven" id="gridTravelOptDep9">
                                                         <td colspan="3">
                                                             <table width="330px" cellspacing="0" cellpadding="0">				
