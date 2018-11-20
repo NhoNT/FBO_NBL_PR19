@@ -15,7 +15,9 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-12" style="text-align: center">
-          <h3>Airport 1 - Airport 2</h3>
+          <c:if test="${selectFlightOutputForm!=null}">
+            <h3>${selectFlightOutputForm.departAirport} - ${selectFlightOutputForm.arriveAirport}</h3>
+          </c:if>
         </div>
       </div>
       <div class="row">

@@ -125,13 +125,13 @@
                 <div class="col-xxs-12 col-xs-6 mt alternate">
                   <div class="input-field">
                     <label for="date-end">Adult:</label>
-                    <form:input path="adultNumber" type="number" class="form-control" id="date-end" placeholder="1"/>
+                    <form:input path="adultNumber" type="number" class="form-control" id="date-end" placeholder="1" min="1"/>
                   </div>
                 </div>
                 <div class="col-xxs-12 col-xs-6 mt alternate">
                   <div class="input-field">
                     <label for="date-end">Children:</label>
-                    <form:input  path="childrenNumber"  type="number" class="form-control" id="date-end" placeholder="0"/>
+                    <form:input  path="childrenNumber"  type="number" class="form-control" id="date-end" placeholder="0" min="0"/>
                   </div>
                 </div>
                 <div class="col-xxs-12 col-xs-6 mt alternate">

@@ -7,4 +7,5 @@ import pr19.fbo.domain.entity.AirportEntity;
 @Repository
 public interface AirportRepository extends CrudRepository<AirportEntity, Integer> {
 
+  AirportEntity findByAirportCode(String airportCode);
 }

@@ -8,6 +8,8 @@ public interface BookingService {
 
   public List<AirportEntity> getAllAirports();
 
+  public AirportEntity getAirportByCode(String airportCode);
+
   public List<FlightEntity> getAllFlights();
 
   public List<FlightEntity> getFlightsByRoute();

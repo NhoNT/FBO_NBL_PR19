@@ -1,5 +1,6 @@
 package pr19.fbo.app.booking;
 
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +27,12 @@ public class BookingController {
   @RequestMapping(value = "displaySearch")
   public String displaySearchBooking(Model model, BookingInputForm bookingInputForm) {
     model.addAttribute("airports", bookingService.getAllAirports());
+    bookingInputForm.setAdultNumber("1");
+    bookingInputForm.setChildrenNumber("0");
+
+    LocalDate today = LocalDate.now();
+    bookingInputForm.setDepartureDate(today);
+    bookingInputForm.setReturnDate(today);
     model.addAttribute("bookingInputForm", bookingInputForm);
     return "homepage/home";
   }
@@ -54,6 +61,12 @@ public class BookingController {
   public String processSearchBooking1(Model model, BookingInputForm bookingInputForm) {
     SelectFlightOutputForm selectFlightOutputForm = new SelectFlightOutputForm();
 
+    System.out.println("processSearchBooking");
+    System.out.println(bookingInputForm.getDepartureAirportCode());
+    System.out.println(bookingInputForm.getArriveAirportCode());
+    System.out.println(bookingInputForm.getDepartureDate());
+    System.out.println(bookingInputForm.getDepartureDate());
+    System.out.println(bookingInputForm.getDepartureDate().toString());
 //    FlightSuggested flightSuggested1 = new FlightSuggested();
 //    flightSuggested1.setFlightId(1);
 //    flightSuggested1.setDepart("25/11 06:30");
@@ -93,6 +106,8 @@ public class BookingController {
       flightSuggesteds.add(flightSuggested);
     }
 
+    selectFlightOutputForm.setDepartAirport(bookingService.getAirportByCode(bookingInputForm.getDepartureAirportCode()).getLocation());
+    selectFlightOutputForm.setArriveAirport(bookingService.getAirportByCode(bookingInputForm.getArriveAirportCode()).getLocation());
     selectFlightOutputForm.setFlightSuggesteds(flightSuggesteds);
 
     model.addAttribute("selectFlightOutputForm", selectFlightOutputForm);

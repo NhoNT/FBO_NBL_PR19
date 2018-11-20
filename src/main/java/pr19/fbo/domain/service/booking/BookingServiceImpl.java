@@ -51,4 +51,8 @@ public class BookingServiceImpl implements BookingService {
     return flightList;
   }
 
+  @Override
+  public AirportEntity getAirportByCode(String airportCode) {
+    return airportRepository.findByAirportCode(airportCode);
+  }
 }

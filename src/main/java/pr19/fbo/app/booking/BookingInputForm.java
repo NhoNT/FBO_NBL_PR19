@@ -9,7 +9,8 @@ public class BookingInputForm {
   private String arriveAirportCode;
   @DateTimeFormat(pattern = "yyyy-MM-dd")
   private LocalDate departureDate;
-  private String returnDate;
+  @DateTimeFormat(pattern = "yyyy-MM-dd")
+  private LocalDate returnDate;
   private String ClassOfChair;
   private String AdultNumber;
   private String ChildrenNumber;
@@ -42,11 +43,11 @@ public class BookingInputForm {
     this.departureDate = departureDate;
   }
 
-  public String getReturnDate() {
+  public LocalDate getReturnDate() {
     return returnDate;
   }
 
-  public void setReturnDate(String returnDate) {
+  public void setReturnDate(LocalDate returnDate) {
     this.returnDate = returnDate;
   }
 
