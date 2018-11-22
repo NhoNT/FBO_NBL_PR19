@@ -23,21 +23,12 @@ public class CustomerEntity implements Serializable {
     private String lastname;
     private String phone;
     private String password;
-    private String enterpassword;
+
 
     public CustomerEntity() {
     }
 
-    public CustomerEntity(int customerId, String username, String email, String firstname, String lastname, String phone, String password, String enterpassword) {
-        this.customerId = customerId;
-        this.username = username;
-        this.email = email;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.phone = phone;
-        this.password = password;
-        this.enterpassword = enterpassword;
-    }
+
 
     public int getCustomerId() {
         return customerId;
@@ -95,12 +86,5 @@ public class CustomerEntity implements Serializable {
         this.password = password;
     }
 
-    public String getEnterpassword() {
-        return enterpassword;
-    }
-
-    public void setEnterpassword(String enterpassword) {
-        this.enterpassword = enterpassword;
-    }
     
 }

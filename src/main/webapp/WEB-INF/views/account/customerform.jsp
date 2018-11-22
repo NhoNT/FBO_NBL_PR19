@@ -1,5 +1,3 @@
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="mvc"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
@@ -20,10 +18,33 @@
             #aa{
                 padding-left: 25%;
             }
-            #a{
+            #nhap{
                 width: 200px;
             }
         </style>
+                <script>
+            var $ = function (id) {
+                return document.getElementById(id);
+            }
+            var joinList = function () {
+                var pass = $("pass").value;
+                var pass1 = $("pass1").value;
+                var isValid = true;
+                if (pass !== pass1) {
+                    alert("The password does not match");
+                    isValid = false;
+                }
+                if (isValid) {
+                    $("form_pass").submit();
+                }else{
+                     
+                }
+            }
+
+            window.onload = function () {
+                $("nhap").onclick = joinList;
+            }
+        </script>
     </head>
 
     <body>
@@ -36,7 +57,7 @@
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12">
-                    <mvc:form action="${pageContext.request.getContextPath()}/customer/register" method="post" modelAttribute="customer" class="form-horizontal">
+                    <mvc:form id="form_pass" action="${pageContext.request.getContextPath()}/customer/register" method="post" modelAttribute="customer" class="form-horizontal">
                         <div id="aa"> 
 
                             <div class="form-group">
@@ -79,19 +100,19 @@
                             <div class="form-group">
                                 <label class="col-xs-4 col-sm-2 control-label">Password: (*)</label>
                                 <div class="col-xs-8 col-sm-8">
-                                    <mvc:input path="password" value= "${customer.password}"/>
+                                    <mvc:input id="pass" path="password" value= "${customer.password}"/>
                                 </div>
                             </div>
                             
                               <div class="form-group">
-                                <label class="col-xs-4 col-sm-2 control-label">Enter Password: (*)</label>
+                                <label class="col-xs-4 col-sm-2 control-label">Re-Type Password: (*)</label>
                                 <div class="col-xs-8 col-sm-8">
-                                    <mvc:input path="enterpassword" value= "${customer.password}"/>
+                                    <input type="password" id="pass1"/>
                                 </div>
                             </div>   
                         </div>
                         <div class="form-group" style="text-align: center">
-                            <input id="a" type="submit" value="Submit" class="btn btn-primary" />
+                            <input id="nhap" type="button" value="Submit" class="btn btn-primary" />
                         </div>
                     </mvc:form>
                 </div>
