@@ -10,12 +10,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Flight Booking Online</title>
-    <base href="${pageContext.request.getContextPath()}/resources/app/">
-    <link href="${pageContext.request.getContextPath()}/resources/app/css/newcss.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="${pageContext.request.getContextPath()}/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <script src="${pageContext.request.getContextPath()}/webjars/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
-    <script src="${pageContext.request.getContextPath()}/webjars/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <base href="${pageContext.request.contextPath}/resources/app/">
+    <link href="${pageContext.request.contextPath}/resources/app/css/newcss.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="${pageContext.request.contextPath}/webjars/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/webjars/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
     <style>
       /* Remove the navbar's default margin-bottom and rounded borders */ 
       .navbar {
@@ -65,7 +64,7 @@
             <li><a href="#">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="${pageContext.request.getContextPath()}/customer/register"><span class="glyphicon glyphicon-log-in"></span>Register</a></li>
+            <li><a href="${pageContext.request.contextPath}/customer/register"><span class="glyphicon glyphicon-log-in"></span>Register</a></li>
           </ul>
         </div>
       </div>
@@ -124,14 +123,35 @@
 
                 <div class="col-xxs-12 col-xs-6 mt alternate">
                   <div class="input-field">
-                    <label for="date-end">Adult:</label>
-                    <form:input path="adultNumber" type="number" class="form-control" id="date-end" placeholder="1" min="1"/>
+                    <label>Adult:</label>
+                    <form:select  path="adultNumber" class="form-control">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </form:select>
                   </div>
                 </div>
                 <div class="col-xxs-12 col-xs-6 mt alternate">
                   <div class="input-field">
-                    <label for="date-end">Children:</label>
-                    <form:input  path="childrenNumber"  type="number" class="form-control" id="date-end" placeholder="0" min="0"/>
+                    <label>Children:</label>
+                    <form:select  path="childrenNumber" class="form-control">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                    </form:select>
                   </div>
                 </div>
                 <div class="col-xxs-12 col-xs-6 mt alternate">
@@ -195,14 +215,14 @@
 
                 <h2 class="section-title clearfix" style="margin-bottom: 8px;">
                   Hot Deals On Flights
-                  <a href="https://www.elines.vn/" target="_blank" class="icon-hover icon-text icon-text--rev icon-text--s1 section-title__link">View all flights
+                  <a href="" target="_blank" class="icon-hover icon-text icon-text--rev icon-text--s1 section-title__link">View all flights
 
                   </a>
                 </h2>
 
                 <div class="grid row">
                   <div class="clearfix js-agoda-hotels js-eq-height-wrapper">
-                    <a target="_blank" href="http://www.agoda.com/vi-vn/partners/xml2012_landing.aspx?siteid=1604047&amp;currency=VND&amp;asq=HYIrr9YPF%2bxSQOAH8tE9UiTywPa7Psm9wmypt8eSKbrNuJqYJoXEZCcBCWEFQzZaqBSvmg5GxcKhjC1IF%2b7jKOxHVL3LpV5wkXI%2bUbjDyoFnSxROs%2fHFDYx1Zn9%2f21Xwgtxxh0HZ6X%2bM6gl%2bKCNja6vkIMphREIgoqgKN5rvVJo%3d&amp;tag=hh" class="card card-agoda ">
+                    <a target="_blank" href="" class="card card-agoda ">
                       <figure class="card__container js-eq-height-item" style="">
                         <div class="card__img-container reponsive-ratio reponsive-ratio--8_5">
                           <img src="img/hanoi.jpg" alt="HaNoi" class="reponsive-ratio__media">
@@ -224,7 +244,7 @@
                         </figcaption>
                       </figure>
                     </a>
-                    <a target="_blank" href="http://www.agoda.com/vi-vn/partners/xml2012_landing.aspx?siteid=1604047&amp;currency=VND&amp;asq=HYIrr9YPF%2bxSQOAH8tE9UiTywPa7Psm9wmypt8eSKbrNuJqYJoXEZCcBCWEFQzZaqBSvmg5GxcKhjC1IF%2b7jKIG7PsP2npAOyXYNB3jjC2i4y5wVkIU24oFMuhlhP1ZCEsZWOppyeBdlJwf4LvjZ1Cy93L5UJw7FCvVs5ghIrGU%3d&amp;tag=hh" class="card card-agoda ">
+                    <a target="_blank" href="" class="card card-agoda ">
                       <figure class="card__container js-eq-height-item" style="">
                         <div class="card__img-container reponsive-ratio reponsive-ratio--8_5">
                           <img src="img/dalat.jpg" alt="DaLat" class="reponsive-ratio__media">
@@ -247,7 +267,7 @@
                     </a>
 
 
-                    <a target="_blank" href="http://www.agoda.com/vi-vn/partners/xml2012_landing.aspx?siteid=1604047&amp;currency=VND&amp;asq=HYIrr9YPF%2bxSQOAH8tE9UiTywPa7Psm9wmypt8eSKbrNuJqYJoXEZCcBCWEFQzZaqBSvmg5GxcKhjC1IF%2b7jKNxwkkU%2fkaPpGTPlZmWHmglnSxROs%2fHFDYx1Zn9%2f21Xwgtxxh0HZ6X%2bM6gl%2bKCNja6vkIMphREIgoqgKN5rvVJo%3d&amp;tag=hh" class="card card-agoda ">
+                    <a target="_blank" href="" class="card card-agoda ">
                       <figure class="card__container js-eq-height-item" style="">
                         <div class="card__img-container reponsive-ratio reponsive-ratio--8_5">
                           <img src="img/danang.jpg" alt="DaNang" class="reponsive-ratio__media">
@@ -270,7 +290,7 @@
                     </a>
 
 
-                    <a target="_blank" href="http://www.agoda.com/vi-vn/partners/xml2012_landing.aspx?siteid=1604047&amp;currency=VND&amp;asq=HYIrr9YPF%2bxSQOAH8tE9UiTywPa7Psm9wmypt8eSKbrNuJqYJoXEZCcBCWEFQzZaqBSvmg5GxcKhjC1IF%2b7jKOPpOWph24Ni04hwj5gGWf5nSxROs%2fHFDYx1Zn9%2f21Xwgtxxh0HZ6X%2bM6gl%2bKCNja6vkIMphREIgoqgKN5rvVJo%3d&amp;tag=hh" class="card card-agoda ">
+                    <a target="_blank" href="" class="card card-agoda ">
                       <figure class="card__container js-eq-height-item" style="">
                         <div class="card__img-container reponsive-ratio reponsive-ratio--8_5">
                           <img src="img/saigon.jpg" alt="Sai Gon" class="reponsive-ratio__media">

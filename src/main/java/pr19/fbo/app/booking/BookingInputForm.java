@@ -1,7 +1,9 @@
 package pr19.fbo.app.booking;
 
 import java.time.LocalDate;
+import java.util.List;
 import org.springframework.format.annotation.DateTimeFormat;
+import pr19.fbo.domain.entity.TicketEntity;
 
 public class BookingInputForm {
 
@@ -15,6 +17,7 @@ public class BookingInputForm {
   private String AdultNumber;
   private String ChildrenNumber;
   private String roundTrip;
+  private List<TicketEntity> ticketList;
 
   public BookingInputForm() {
   }
@@ -81,6 +84,14 @@ public class BookingInputForm {
 
   public void setRoundTrip(String roundTrip) {
     this.roundTrip = roundTrip;
+  }
+
+  public List<TicketEntity> getTicketList() {
+    return ticketList;
+  }
+
+  public void setTicketList(List<TicketEntity> ticketList) {
+    this.ticketList = ticketList;
   }
 
 }

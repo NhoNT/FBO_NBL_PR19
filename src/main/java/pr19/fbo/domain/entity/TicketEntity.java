@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "ticket")
@@ -20,8 +21,13 @@ public class TicketEntity implements Serializable {
   private String ticketCode;
   private String firstName;
   private String lastName;
+  private int sex;
+  private String email;
+  @DateTimeFormat(pattern = "yyyy-MM-dd")
   private LocalDate birthday;
-  private int orderId;
+  @ManyToOne
+  @JoinColumn(name = "orderId")
+  private OrdersEntity order;
   @ManyToOne
   @JoinColumn(name = "flightId")
   private FlightEntity flight;
@@ -64,6 +70,22 @@ public class TicketEntity implements Serializable {
     this.lastName = lastName;
   }
 
+  public int getSex() {
+    return sex;
+  }
+
+  public void setSex(int sex) {
+    this.sex = sex;
+  }
+
+  public String getEmail() {
+    return email;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
   public LocalDate getBirthday() {
     return birthday;
   }
@@ -72,12 +94,12 @@ public class TicketEntity implements Serializable {
     this.birthday = birthday;
   }
 
-  public int getOrderId() {
-    return orderId;
+  public OrdersEntity getOrder() {
+    return order;
   }
 
-  public void setOrderId(int orderId) {
-    this.orderId = orderId;
+  public void setOrder(OrdersEntity order) {
+    this.order = order;
   }
 
   public FlightEntity getFlight() {

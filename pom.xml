@@ -68,11 +68,11 @@
       <version>5.2.10.Final</version>
     </dependency>
     <!-- == End Database == -->
-<!--    <dependency>
+   <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>jquery</artifactId>
       <version>3.2.1</version>
-    </dependency>-->
+    </dependency>
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>bootstrap</artifactId>

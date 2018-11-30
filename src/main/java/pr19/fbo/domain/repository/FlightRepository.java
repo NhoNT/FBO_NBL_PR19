@@ -41,21 +41,4 @@ public interface FlightRepository extends CrudRepository<FlightEntity, Integer> 
           + "", nativeQuery = true)
   List<FlightEntity> findFlights(String departureAirportCode, String arriveAirportCode, String departureDate, int quantityEconomy, int quantityBusiness);
 
-  @Query(value = "SELECT *\n"
-          + "FROM flight\n"
-          + "INNER JOIN aircraft ON flight.aircraftId = aircraft.aircraftId\n"
-          + "INNER JOIN route ON flight.routeId = route.routeId\n"
-          + "WHERE (flight.routeId IN\n"
-          + "         (SELECT routeId\n"
-          + "          FROM route\n"
-          + "          WHERE (departureAirportId IN\n"
-          + "                   (SELECT airportId\n"
-          + "                    FROM airport\n"
-          + "                    WHERE (airportCode = ?1)))\n"
-          + "            AND (arriveAirportId IN\n"
-          + "                   (SELECT airportId\n"
-          + "                    FROM airport\n"
-          + "                    WHERE (airportCode = ?2)))))\n"
-          + "  AND (DATE(flight.departureTime) = ?3)", nativeQuery = true)
-  List<FlightEntity> findFlights1(String departureAirportCode, String arriveAirportCode, String departureDate);
 }

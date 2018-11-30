@@ -1,0 +1,123 @@
+header,
+footer,
+main,
+nav,
+aside,
+article,
+section,
+figure {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+html {
+  background-color: #fff;
+}
+
+body {
+  background-color: #eee;
+  width: 960px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 3px solid #931420;
+}
+
+header {
+  border: 3px solid #ff0000;
+}
+
+nav {
+  border: 3px solid #ff0000;
+}
+
+main {
+  border: 3px solid #ff0000;
+}
+
+footer {
+  border: 3px solid #ff0000;
+}
+
+section {
+  border: 3px solid #00ff00;
+}
+
+article {
+  border: 3px solid #0000ff;
+}
+
+aside {
+  border: 3px solid #00ff00;
+}
+
+.form_class1 label {
+  display: inline-block;
+  width: 20em;
+  text-align: right;
+  vertical-align: middle;
+}
+
+label.left {
+  text-align: left;
+}
+
+.form_class1 input,
+select,
+textarea {
+  width: 15em;
+  height: 2em;
+  margin-left: 0.5em;
+  margin-right: 0.25em;
+  vertical-align: middle;
+}
+
+.form_class1 input[type="radio"],
+input[type="checkbox"] {
+  width: 1em;
+}
+
+.form_class1 button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  width: 15em;
+  height: 1.5em;
+}
+
+.form_class1 div {
+  margin-bottom: 1em;
+}
+
+.form_class1 select[multiple] {
+  height: 5em;
+}
+
+.form_class1 textarea {
+  width: 18em;
+  height: 5em;
+}
+
+.form_class1 legend {
+  padding-bottom: 0.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.form_class1 fieldset {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  padding: 0.5em 1em;
+}
+
+.form_class1 fieldset {
+  border: 2px solid #ffff00;
+  background-color: #add8e6;
+}

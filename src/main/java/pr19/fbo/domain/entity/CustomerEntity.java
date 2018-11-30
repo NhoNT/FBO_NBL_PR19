@@ -24,6 +24,8 @@ public class CustomerEntity implements Serializable {
     private String phone;
     private String password;
 
+    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
+    private List<OrdersEntity> ordersList;
 
     public CustomerEntity() {
     }
@@ -86,5 +88,11 @@ public class CustomerEntity implements Serializable {
         this.password = password;
     }
 
-    
+    public List<OrdersEntity> getOrdersList() {
+      return ordersList;
+    }
+
+    public void setOrdersList(List<OrdersEntity> ordersList) {
+      this.ordersList = ordersList;
+    }
 }

@@ -5,7 +5,7 @@ public class FlightSuggested {
   private int flightId;
   private String depart;
   private String arrive;
-  private String flightDetail;
+  private String aircraft;
   private String economyPrice;
   private String businessPrice;
 
@@ -28,12 +28,12 @@ public class FlightSuggested {
     this.arrive = arrive;
   }
 
-  public String getFlightDetail() {
-    return flightDetail;
+  public String getAircraft() {
+    return aircraft;
   }
 
-  public void setFlightDetail(String flightDetail) {
-    this.flightDetail = flightDetail;
+  public void setAircraft(String aircraft) {
+    this.aircraft = aircraft;
   }
 
   public String getEconomyPrice() {

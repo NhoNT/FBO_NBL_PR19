@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <base href="${pageContext.request.getContextPath()}/resources/app/">
+        <base href="${pageContext.request.contextPath}/resources/app/">
         <style>
             /* Remove the navbar's default margin-bottom and rounded borders */ 
             .navbar {
@@ -85,13 +85,13 @@
                             <img width="90px" height="100px"  src="img/8.jpg" alt=""/>  
                             <div style="text-align: left">
                             <button  class="btn btn-primary" 
-                                    onclick="location.href = '${pageContext.request.getContextPath()}/customer/edit/img/${customer.customerId}'" >Edit Photo</button>
+                                    onclick="location.href = '${pageContext.request.contextPath}/customer/edit/img/${customer.customerId}'" >Edit Photo</button>
                             </div>
                             
                             
                             <div style="text-align: right">
                             <button  class="btn btn-primary" 
-                                    onclick="location.href = '${pageContext.request.getContextPath()}/customer/edit/${customer.customerId}'" >Edit Customer</button>
+                                    onclick="location.href = '${pageContext.request.contextPath}/customer/edit/${customer.customerId}'" >Edit Customer</button>
                             </div>
                             <table class="table table-bordered">
                                 <tr>

@@ -57,7 +57,7 @@
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12">
-                    <mvc:form id="form_pass" action="${pageContext.request.getContextPath()}/customer/register" method="post" modelAttribute="customer" class="form-horizontal">
+                    <mvc:form id="form_pass" action="${pageContext.request.contextPath}/customer/register" method="post" modelAttribute="customer" class="form-horizontal">
                         <div id="aa"> 
 
                             <div class="form-group">
